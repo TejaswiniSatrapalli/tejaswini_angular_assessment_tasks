@@ -1,0 +1,47 @@
+<table style="width: 100%; height: 100%">
+    <tr>
+        <td style="width: 20%; background-color: rgb(244, 221, 226);">
+        
+            <table>
+                <tr>
+                    <td> Enter  Headline </td>
+                    <td> <input type="text" #headline/> </td>
+                </tr>
+               
+                <tr>
+                    <td>Category</td>
+                    <td> 
+                        <select #category>
+                            <option> BusinessNews </option>
+                            <option> Politics </option>
+                            <option> Crime </option>
+                            <option> World </option>
+                            <option> Technology </option>
+                            <option> Sports</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Main News </td>
+                    <td> <input type="text" #mainNews/> </td>
+                </tr>
+
+                <tr>
+                    <td> Image Name </td>
+                    <td> <input type="text" value="news.JPG" #image/> </td>
+                </tr>
+                <tr>
+                    <td> <input type="reset" vaule="Clear All"></td>
+                    <td> <input type="button" 
+                        (click)="readNews(headline.value,category.value,mainNews.value,image.value)"
+                        value="Add News" /> </td>
+                </tr>
+                
+            
+            </table>
+            <br/>
+        
+        </td>
+    </tr>
+</table>
+

@@ -1,0 +1,35 @@
+<div >
+    <table>
+        <tr>          
+            <td>
+                Filter Business News
+                Category
+
+                    <select #category (change)="getFilterData(category.value)">
+                        <option> AllNews</option>
+
+                        <option> BusinessNews </option>
+                       
+                    </select>
+                              
+            </td>
+            
+        </tr>
+    </table>
+</div>
+
+<hr/>
+<div *ngFor="let n of allNews">
+<table>
+    <tr>
+        <td> <img src="/assets/images/{{n.image}}" alt="news image" width="120px" height="150px"> </td>
+        <td> 
+            <h2> {{n.headline}}</h2>
+            <p> {{n.mainNews|info}} </p>
+            <hr/>
+            <button value="{{n.headline}}" (click)="readFullArticle(news.value)" #news> Read Full Article</button>
+        </td>
+        
+    </tr>
+</table>
+</div>
